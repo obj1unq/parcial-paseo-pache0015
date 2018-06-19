@@ -20,18 +20,19 @@ class Prenda{
 		desgaste = _desgaste
 	}
 	method desgaste(){
-		return if(desgaste >=3){3} else {desgaste}
+		return if(desgaste >=3){3} else {desgaste} // Usa el nombre desgaste para dos cosas distintas.
 	}
-	method talleCoincide(_ninio){
+	method talleCoincide(_ninio){ // Nombre confuso
 		return if(self.talle() == _ninio.talle()){8} else {0}
 	}
 	method asignarAbrigo(_valor){
 		abrigo = _valor
 	}
-	method abrigo(){
+	method abrigo(){ 
 		return abrigo
 	}
 	method calidad(_ninio){
+		// Usar abrigo como atributo hace fútil que las subclases sobreescriban el método del mismo nombre.
 		return abrigo + self.comodidad(_ninio)
 	}
 	method usar(){
@@ -42,6 +43,8 @@ class Prenda{
 
 
 class PrendaLiviana inherits Prenda{
+	// Cuál es la diferencia entre el desgaste en esta prenda y el que está en la superclase?
+	// Debería ser un valor único para todas las prendas livianas.
 	var valorDeAbrigoDeterminado = 1
 	var valorDeDesgasteDeterminado = 0
 	override method comodidad(_ninio){
@@ -63,6 +66,7 @@ class PrendaLiviana inherits Prenda{
 }
 
 class PrendaPesada inherits Prenda{
+	// Cuál es la diferencia entre el desgaste en esta prenda y el que está en la superclase?
 	var valorDeDesgasteDeterminado = 0
 	
 	method modificarDesgaste(_valor){

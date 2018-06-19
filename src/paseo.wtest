@@ -1,3 +1,15 @@
+// Nota 8 (ocho): Buen programa con conceptos sólidos, más allá de algunos errores.
+
+// 1) B-. Tiene algunas inconsistencias en el cálculo del desgaste.
+// 2) MB. 
+// 3) B-. No implementa bien los defaults ni define una configuración global para el nivel de abrigo de prendas livianas.
+// 4) B. Problemas en el cálculo de la calidad, por usar el atributo abrigo directamente, rompe la posibilidad de sobreescritura.
+// 5) MB.
+// 6) MB.
+// 7) B (delegar mejor el conocimiento de cuando un niño es pequeño)
+// 8) B-: No chequea precondición.
+// Algunos tests están comentados y otros no andan.
+
 import prendas.*
 import ninio.*
 import familia.*
